@@ -21,7 +21,7 @@
         </div>
         <div>
           <label for="about" class="block text-sm font-medium text-gray-700"
-            >About yourself</label
+            >About Yourself</label
           >
           <div class="mt-1">
             <textarea

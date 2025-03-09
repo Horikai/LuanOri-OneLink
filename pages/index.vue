@@ -38,7 +38,7 @@
           <icon name="ph:paper-plane-tilt-bold" class="h-4 w-4" />
         </button>
         <a
-          href="https://github.com/fayazara/onelink"
+          href="https://github.com/LuanOri"
           target="_blank"
           class="h-12 flex items-center space-x-2 px-4 border-r text-xs font-medium bg-white text-slate-700"
         >
@@ -49,11 +49,11 @@
     </div>
     <app-form-preview :data="data" />
     <a
-      href="https://twitter.com/fayazara"
+      href="https://twitter.com/LuanOri"
       target="_blank"
       class="absolute bottom-0 right-0 bg-white rounded-tl-lg shadow px-4 py-1 font-medium text-sm text-gray-500"
     >
-      Made by Fayaz
+      Made By LuanOri
     </a>
   </div>
 </template>
@@ -78,18 +78,18 @@ const data = ref({
 
 const prefillDemoData = () => {
   data.value = {
-    n: "John Snow",
-    d: "I’m John Snow, the king in the north. I know Nothing.",
-    i: "https://i.insider.com/56743fad72f2c12a008b6cc0",
-    f: "https://www.facebook.com/john_snow",
-    t: "https://twitter.com/john_snow",
-    ig: "https://www.instagram.com/john_snow",
-    e: "mail@john_snow.cc",
-    gh: "https://github.com/john_snow",
-    tg: "https://t.me/john_snow",
-    w: "+918888888888",
-    y: "https://youtube.com/@john_snow",
-    l: "https://linkedin.com/john_snow",
+    n: "Hoang Luan (LuanOri)",
+    d: "Xin Chào Tôi Là LuanOri Tiểu Thư Trên Ảnh Chính Là Vợ Tôi.",
+    i: "https://cover-talk.zadn.vn/4/c/a/3/21/d03d1633f161060c755f988ed0b82ee0.jpg",
+    f: "https://www.facebook.com/LuanOri",
+    t: "https://twitter.com/LuanOri",
+    ig: "https://www.instagram.com/LuanOri",
+    e: "mail@luanori.space",
+    gh: "https://github.com/LuanOri",
+    tg: "https://t.me/LuanOri",
+    w: "+848888888888",
+    y: "https://youtube.com/@LuanOriIT",
+    l: "https://linkedin.com/LuanOri",
     ls: [
       {
         l: "My Website",
