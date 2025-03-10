@@ -1,11 +1,12 @@
 <template>
-  <div class="h-screen grid grid-cols-3 divide-x">
+  <div class="h-screen grid grid-cols-3 divide-x" >
     <div class="col-span-2 h-screen flex flex-col bg-slate-100">
       <div class="flex-1 overflow-y-auto p-8">
         <app-form-profile
           v-model:name="data.n"
           v-model:desc="data.d"
           v-model:image="data.i"
+          v-model:bg="data.bg"
         />
         <app-form-hr />
         <app-form-social-links
@@ -64,6 +65,7 @@ const data = ref({
   n: "",
   d: "",
   i: "",
+  bg: "",
   f: "",
   t: "",
   ig: "",
@@ -81,6 +83,7 @@ const prefillDemoData = () => {
     n: "Hoang Luan (LuanOri)",
     d: "Xin Chào Tôi Là LuanOri Tiểu Thư Trên Ảnh Chính Là Vợ Tôi.",
     i: "https://cover-talk.zadn.vn/4/c/a/3/21/d03d1633f161060c755f988ed0b82ee0.jpg",
+    bg: "https://cover-talk.zadn.vn/4/c/a/3/21/d03d1633f161060c755f988ed0b82ee0.jpg",
     f: "https://www.facebook.com/LuanOri",
     t: "https://twitter.com/LuanOri",
     ig: "https://www.instagram.com/LuanOri",
@@ -123,7 +126,7 @@ const prefillDemoData = () => {
 const publish = () => {
   const url = `${window.location.origin}/1?data=${encodeData(data.value)}`;
   navigator.clipboard.writeText(url).then(() => {
-    alert("Link copied to clipboard");
+    alert("Link Copied to Clipboard");
   });
 };
 </script>

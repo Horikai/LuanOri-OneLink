@@ -1,5 +1,5 @@
 <template>
-  <main class="p-4 bg-white h-full w-full space-y-8 pt-12 max-w-lg mx-auto">
+  <main :style="backgroundStyle" class="p-4 h-full w-full space-y-14 pt-14 max-w-lg mx-auto">
     <div class="text-center">
       <div
         v-if="acc.i"
@@ -7,10 +7,11 @@
       >
         <img :src="acc.i" alt="name" class="h-full w-full object-cover" />
       </div>
+
       <h1 v-if="acc.n" class="text-2xl font-bold mt-4 text-slate-800">
         {{ acc.n }}
       </h1>
-      <p v-if="acc.d" class="text-sm mt-2 text-slate-600">
+      <p v-if="acc.d" class="text-sm mt-2 font-bold text-slate-900">
         {{ acc.d }}
       </p>
     </div>
@@ -69,14 +70,15 @@
         </a>
       </span>
     </div>
-    <ul class="space-y-2">
-      <ExternalLink
-        v-for="(link, id) in acc.ls"
-        :label="link.l"
-        :icon="link.i"
-        :url="link.u"
-        :key="id"
-      />
+    <ul class="list-none p-5 m-0">
+      <li v-for="(link, id) in acc.ls" :key="id" class="mb-4">
+        <ExternalLink
+          :label="link.l" class="mb-4"
+          :icon="link.i" class1="mb-4"
+          :bg="link.bg" class2="mb-4"
+          :url="link.u" class3="mb-4"
+        />
+      </li>
     </ul>
   </main>
 </template>
@@ -86,6 +88,17 @@ const props = defineProps({
     type: Object,
     required: true,
   },
+});
+
+const backgroundStyle = computed(() => {
+  return props.acc.bg
+    ? {
+        backgroundImage: `url(${props.acc.bg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }
+    : {};
 });
 
 const allSocialLinksAreEmpty = computed(() => {

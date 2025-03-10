@@ -17,8 +17,8 @@
       <template #item="{ element: link }">
         <div class="relative mb-6 group">
           <button class="absolute top-2 -left-8">
-            <icon
-              name="radix-icons:drag-handle-dots-2"
+            <Icon
+              :icon="link.i"
               class="h-6 w-6 text-slate-500 drag-handle"
             />
           </button>
@@ -26,7 +26,7 @@
             @click="removeLink(link)"
             class="hidden group-hover:flex items-center justify-center h-6 w-6 rounded-full bg-slate-300 text-slate-600 absolute -right-3 -top-3"
           >
-            <icon name="fluent:dismiss-24-regular" class="h-4 w-4" />
+            <Icon icon="fluent:dismiss-24-regular" class="h-4 w-4" />
           </button>
           <div class="shadow sm:overflow-hidden sm:rounded-md">
             <div class="space-y-6 bg-white px-4 py-5 sm:p-6">
@@ -90,12 +90,14 @@
       @click="appendLink"
       class="mt-8 border-2 text-slate-500 border-slate-300 rounded-lg block w-full py-2"
     >
-      <icon name="fluent:add-circle-24-regular" class="h-6 w-6" />
+      <Icon icon="fluent:add-circle-24-regular" class="h-6 w-6" />
     </button>
   </base-form-section>
 </template>
 <script setup>
 import draggable from "vuedraggable";
+import { Icon } from '@iconify/vue';
+
 const emit = defineEmits(["update:modelValue"]);
 const props = defineProps({
   modelValue: Array,
