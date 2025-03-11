@@ -116,4 +116,23 @@ const allSocialLinksAreEmpty = computed(() => {
   );
 });
 </script>
-<style scoped></style>
+<style scoped>
+/* Add styles for Android devices */
+@media only screen and (max-width: 600px) {
+  main {
+    padding: 2rem 1rem;
+  }
+  .text-center h1 {
+    font-size: 1.5rem;
+  }
+  .text-center p {
+    font-size: 0.875rem;
+  }
+  .flex-wrap span {
+    padding: 0.5rem;
+  }
+  .list-none li {
+    margin-bottom: 1rem;
+  }
+}
+</style>
