@@ -121,18 +121,32 @@ const allSocialLinksAreEmpty = computed(() => {
 @media only screen and (max-width: 600px) {
   main {
     padding: 2rem 1rem;
+    background-color: #f0f4f8;
   }
   .text-center h1 {
     font-size: 1.5rem;
+    color: #1a202c;
   }
   .text-center p {
     font-size: 0.875rem;
+    color: #4a5568;
   }
   .flex-wrap span {
     padding: 0.5rem;
   }
   .list-none li {
     margin-bottom: 1rem;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0.75rem;
+  }
+  .list-none li a {
+    color: #2d3748;
+    text-decoration: none;
+  }
+  .list-none li a:hover {
+    text-decoration: underline;
   }
 }
 </style>
